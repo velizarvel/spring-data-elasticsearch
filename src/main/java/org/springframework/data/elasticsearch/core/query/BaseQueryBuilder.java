@@ -178,6 +178,9 @@ public abstract class BaseQueryBuilder<Q extends BaseQuery, SELF extends BaseQue
 		return requestCache;
 	}
 
+	/**
+	 * @since 6.1
+	 */
 	@Nullable
 	public Boolean getIncludeNamedQueriesScore(){
 		return includeNamedQueryScore;
@@ -387,6 +390,9 @@ public abstract class BaseQueryBuilder<Q extends BaseQuery, SELF extends BaseQue
 		return self();
 	}
 
+	/**
+	 * @since 6.1
+	 */
 	public SELF withIncludeNamedQueryScore (@Nullable Boolean namedQueryScore) {
 		this.includeNamedQueryScore = namedQueryScore;
 		return self();

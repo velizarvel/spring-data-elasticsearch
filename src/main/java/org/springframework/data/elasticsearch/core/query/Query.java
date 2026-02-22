@@ -492,10 +492,11 @@ public interface Query {
 	public Integer getRequestSize();
 
 	/**
-	 * Sets the include_named_queries_score value for the query.
-	 * If true, the response includes the score contribution from any named queries.
+	 * Sets the include_named_queries_score value for the query. If true, the response includes the score contribution
+	 * from any named queries.
 	 *
 	 * @param value new value
+	 * @since 6.1
 	 */
 	void setIncludeNamedQueriesScore(@Nullable Boolean value);
 

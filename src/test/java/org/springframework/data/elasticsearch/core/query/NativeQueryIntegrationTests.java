@@ -19,10 +19,10 @@ import static org.assertj.core.api.Assertions.*;
 
 import co.elastic.clients.elasticsearch._types.GeoHashPrecision;
 import co.elastic.clients.elasticsearch._types.aggregations.Aggregation;
+import co.elastic.clients.elasticsearch._types.query_dsl.MatchQuery;
 
 import java.util.List;
 
-import co.elastic.clients.elasticsearch._types.query_dsl.MatchQuery;
 import org.assertj.core.data.Offset;
 import org.jspecify.annotations.Nullable;
 import org.junit.jupiter.api.BeforeEach;
@@ -174,9 +174,9 @@ public abstract class NativeQueryIntegrationTests {
 		assertThat(searchHits.getSearchHit(0).getId()).isEqualTo(entity.getId());
 	}
 
-    @Test // #3248
-    @DisplayName("should be able to use includeNamedQueriesScore in a NativeQuery")
-    void shouldBeAbleToUseIncludeQueriesScoreInANativeQuery() {
+	@Test // #3248
+	@DisplayName("should be able to use includeNamedQueriesScore in a NativeQuery")
+	void shouldBeAbleToUseIncludeQueriesScoreInANativeQuery() {
 
 		var entity = new SampleEntity();
 		entity.setId("7");

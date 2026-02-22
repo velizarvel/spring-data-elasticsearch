@@ -457,6 +457,9 @@ public class BaseQuery implements Query {
 		this.requestCache = value;
 	}
 
+	/**
+	 * @since 6.1
+	 */
 	@Override
 	public void setIncludeNamedQueriesScore(@Nullable Boolean value) {
 		this.includeNamedQueriesScore = value;
@@ -487,6 +490,9 @@ public class BaseQuery implements Query {
 		return indicesBoost;
 	}
 
+	/**
+	 * @since 6.1
+	 */
 	@Override
 	public @Nullable Boolean getIncludeNamedQueriesScore() {
 		return this.includeNamedQueriesScore;
